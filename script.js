@@ -20,6 +20,18 @@ function ranItem(list) {
 //"Brain" of application starts here
 function generatePassword() {
 
+  //Arrays containing each of the character types
+  var numberElements = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+  var upperElements = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+  var lowerElements = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+  var symbolElements = ["!", "@", "#", "$", "%", "^", "&", "*", "?", "-"]
+
+  //Variables that return true or false based on the users password character preference 
+  var confirmNumbers = window.confirm("Do you want numbers in your password?")
+  var confirmUpper = window.confirm("Do you want uppercase letters in your password?")
+  var confirmLower = window.confirm("Do you want lowercase letters in your password?")
+  var confirmSymbols = window.confirm("Do you want symbols in your password?")
+
   //Length is more expansive due to requiring a number value instead of the string returned by window.prompt
   var userInput = window.prompt("How many characters do you want in your password?")
   //parseInt converts a valid string input to a number data type
@@ -35,18 +47,6 @@ function generatePassword() {
     window.alert("Please enter a number between 8 and 128")
     return
   }
-
-  //Variables that return true or false based on the users password character preference 
-  var confirmNumbers = window.confirm("Do you want numbers in your password?")
-  var confirmUpper = window.confirm("Do you want uppercase letters in your password?")
-  var confirmLower = window.confirm("Do you want lowercase letters in your password?")
-  var confirmSymbols = window.confirm("Do you want symbols in your password?")
-
-  //Arrays containing each of the character types
-  var numberElements = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-  var upperElements = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-  var lowerElements = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-  var symbolElements = ["!", "@", "#", "$", "%", "^", "&", "*", "?", "-"]
 
   //List made to contain the confirmed character type lists
   var passwordElements = []
