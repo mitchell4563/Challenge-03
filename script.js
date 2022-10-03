@@ -48,7 +48,7 @@ function generatePassword() {
     return
   }
 
-  //List made to contain the confirmed character type lists
+  //Empty List made to contain the confirmed character type lists
   var passwordElements = []
 
   //Functions to "push" each character type array into the "passwordElements" list if the confirm variable returns true
