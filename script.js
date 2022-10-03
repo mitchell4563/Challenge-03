@@ -34,8 +34,10 @@ function generatePassword() {
 
   //Length is more expansive due to requiring a number value instead of the string returned by window.prompt
   var userInput = window.prompt("How many characters do you want in your password?")
+
   //parseInt converts a valid string input to a number data type
   var Length = parseInt(userInput)
+
   //Function to ensure user input was a valid number, quits function if not valid
   if (isNaN(Length)) {
     window.alert("Please enter a valid number")
@@ -68,10 +70,9 @@ function generatePassword() {
     passwordElements.push(symbolElements)
   }
 
-
   //Safety function for when all character types are declined but a valid length is selected, quits function if none are selected
   if (passwordElements.length === 0) {
-    window.alert("Please Select at least one character type.")
+    window.alert("Please select at least one character type.")
     return
   }
 
